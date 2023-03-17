@@ -1,4 +1,4 @@
-import Poster from "./Posters/Poster";
+import Poster from "./Poster"
 
 export default function Grid() {
   let animes = [
@@ -31,17 +31,21 @@ export default function Grid() {
       url:"https://1.bp.blogspot.com/-FTvPM3qV8Zg/XyH2TaN0-aI/AAAAAAAACDU/cNmq51RiNO4VPz0zlm60knZOeg4wNPAcQCLcBGAsYHQ/s1600/Boku-no-Hero-Academia.jpg"
     }
   ]
+  let getUrl = []
+  let getNames = []
+  for(let i=0; i<animes.length; i++){
+    getUrl.push(animes[i].url)
+    getNames.push(animes[i].name)
+  }
 
   return (
     <>
-      <div className="border-2 border-red-500 w-screen h-80 grid grid-cols-4 grid-rows-3 p-4 gap-4">
-          <Poster img={animes[0].url} h="1"/>
-          <Poster img={animes[1].url} h="2"/>
-          <Poster img={animes[3].url}/>
-          <Poster img={animes[5].url}/>
-          <Poster img={animes[2].url}/>
-          <Poster img={animes[6].url}/>
-          <Poster img={animes[4].url}/>
+      <div className="w-full h-[400px] grid grid-cols-3 grid-rows-4 p-4 gap-4">
+          <Poster img={getUrl[6]} h="full" name={getNames[6]}/>
+          <Poster img={getUrl[5]} h="2" name={getNames[0]}/>
+          <Poster img={getUrl[4]} name={getNames[4]}/>
+          <Poster img={getUrl[3]} h="3" name={getNames[3]}/>
+          <Poster img={getUrl[2]} h="2" name={getNames[2]}/>
       </div>
     </>
   )
