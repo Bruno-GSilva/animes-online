@@ -1,4 +1,4 @@
-export default function PosterBig(props) {
+export default function Poster(props) {
 
     const dimensoes = {
         col:`col-span-${props.w}`,

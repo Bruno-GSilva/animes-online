@@ -1,4 +1,4 @@
-import PosterBig from "./Posters/PosterBig";
+import Poster from "./Posters/Poster";
 
 export default function Grid() {
   let animes = [
@@ -35,13 +35,13 @@ export default function Grid() {
   return (
     <>
       <div className="border-2 border-red-500 w-screen h-80 grid grid-cols-4 grid-rows-3 p-4 gap-4">
-          <PosterBig img={animes[0].url} h="1"/>
-          <PosterBig img={animes[1].url} h="2"/>
-          <PosterBig img={animes[3].url}/>
-          <PosterBig img={animes[5].url}/>
-          <PosterBig img={animes[2].url}/>
-          <PosterBig img={animes[6].url}/>
-          <PosterBig img={animes[4].url}/>
+          <Poster img={animes[0].url} h="1"/>
+          <Poster img={animes[1].url} h="2"/>
+          <Poster img={animes[3].url}/>
+          <Poster img={animes[5].url}/>
+          <Poster img={animes[2].url}/>
+          <Poster img={animes[6].url}/>
+          <Poster img={animes[4].url}/>
       </div>
     </>
   )
